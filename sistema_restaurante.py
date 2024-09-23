@@ -1,10 +1,11 @@
 """
 Informe o número da turma: 
-Turma - 
+Turma - G93313
 
 Nome completo dos componentes.
-1 - 
-2 - 
+1 - Fabricio Silvany de Jesus
+2 - Jonatas Fernandes dos Santos
+3 - José Elias Lima Pereira
 """
 
 
