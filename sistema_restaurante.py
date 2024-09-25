@@ -110,7 +110,8 @@ while True:
 pagamento = int(input("""
 1 - À vista
 2 - Cartão
-"""))
+
+R: """))
 
 match(pagamento):
     case 1:
