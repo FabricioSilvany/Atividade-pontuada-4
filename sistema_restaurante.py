@@ -14,6 +14,10 @@ import os
 # Limpa o terminal.
 os.system("cls || clear") 
 
+#Listas
+pedidos_preco = []
+pedidos_nomes = []
+
 # Defs para o pagamento
 
 def vista (valor_pratos):
@@ -46,8 +50,6 @@ print("""
 
 
 
-pedidos_preco = []
-pedidos_nomes = []
 
 while True:
     pratos = float(input("\nDigite o número do prato desejado: "))
