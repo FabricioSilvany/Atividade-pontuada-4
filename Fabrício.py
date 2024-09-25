@@ -20,7 +20,6 @@ while True:
             print("\nPrato adicionado ao seu pedido")
             print("Strogonoff: R$18.00")
 
-            
         case 4:
             print("\nPrato adicionado ao seu pedido")
             print("Bife acebolado: R$15.00")
