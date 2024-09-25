@@ -3,6 +3,7 @@ import os
 os.system("cls || clear")
 
 
+
 while True:
     pratos = int(input("\nDigite o número do prato desejado: "))
     os.system("cls || clear")
@@ -41,3 +42,10 @@ while True:
 
         case _:
             print("Opção inválida\nTente novamente.")
+            
+    adicionar_prato = input("\nQuer adicionar outro prato? \nSe quiser adicionar outro prato digite 'sim'\nSenão digite'0' \n").lower()
+    if adicionar_prato == "sim":
+        ()
+    else:
+        break
+
