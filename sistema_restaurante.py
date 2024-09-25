@@ -15,10 +15,6 @@ import os
 # Limpa o terminal.
 os.system("cls || clear") 
 
-
-#Variáveis
-forma_pagamento = 0
-
 #Listas
 pedidos_preco = []
 pedidos_nomes = []
@@ -111,7 +107,7 @@ while True:
     adicionar_prato = input("\nQuer adicionar outro prato? \nSe quiser adicionar outro prato digite 'sim'\nSenão digite'0' \nR: ").lower()
 
     if adicionar_prato == "sim":
-        menu ()
+        menu()
     else:
         break
         
@@ -123,18 +119,25 @@ R: """))
 
 match(pagamento):
     case 1:
-        print("Desconto de 10%")
+        print("\nDesconto de 10%")
     case 2:
-        print("Acréscimo de 10%")
+        print("\nAcréscimo de 10%")
+        if pagamento == 1:
+            forma_pagamento = "À vista"
+            valor_final, valor_descontado = vista(valor_pratos)
+        elif pagamento == 2:
+            forma_pagamento = "Cartão"
+            valor_final, valor_adicionado = cartao(valor_pratos)
+
+        if forma_pagamento == 1:
+            print("\nDesconto de 10%!")
+            print(f"\nValor descontado: R${valor_descontado}")
+        elif forma_pagamento == 2:
+            print("Seu valor final teve um acrescimo de 10%!")
+            print(f"Acrescimo de: R${valor_adicionado}")
 
 valor_pratos = sum(pedidos_preco)
 
-if pagamento == 1:
-    forma_pagamento = "À vista"
-    valor_final, valor_descontado = vista(valor_pratos)
-elif pagamento == 2:
-    forma_pagamento = "Cartão"
-    valor_final, valor_adicionado = cartao(valor_pratos)
 
 for i, pedidos in enumerate(pedidos_nomes):
     print(f"{i+1}º pedido: {pedidos}")
@@ -142,10 +145,4 @@ for i, pedidos in enumerate(pedidos_nomes):
 
 print(f"\nValor dos pratos: {valor_pratos}")
 print(f"\nForma de Pagamento: {forma_pagamento}")
-if forma_pagamento == 1:
-    print("\nDesconto de 10%!")
-    print(f"\nValor descontado: R${valor_descontado}")
-elif forma_pagamento == 2:
-    print("Seu valor final teve um acrescimo de 10%!")
-    print(f"Acrescimo de: R${valor_adicionado}")
 print(f"\nValor final: {valor_final}")
