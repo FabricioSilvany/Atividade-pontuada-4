@@ -33,8 +33,3 @@ while True:
             break
         case _:
             print("Opção inválida\nTente novamente.")
-    
-    adicionando = input("Quer adicionar outra opção?: ")
-    match(adicionando):
-        case "sim":
-            print("")
