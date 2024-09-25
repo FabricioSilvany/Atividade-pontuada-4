@@ -15,6 +15,10 @@ import os
 # Limpa o terminal.
 os.system("cls || clear") 
 
+
+#Variáveis
+forma_pagamento = 0
+
 #Listas
 pedidos_preco = []
 pedidos_nomes = []
@@ -94,7 +98,7 @@ while True:
             print("Opção inválida\nTente novamente.")
             
     adicionar_prato = input("\nQuer adicionar outro prato? \nSe quiser adicionar outro prato digite 'sim'\nSenão digite'0' \nR: ").lower()
-    os.system("cls ||")
+
     if adicionar_prato == "sim":
         ()
     else:
@@ -119,12 +123,11 @@ if pagamento == 1:
 elif pagamento == 2:
     forma_pagamento = "Cartão"
     valor_final, valor_adicionado = cartao(valor_pratos)
+os.system("cls || clear")
 
 for i, pedidos in enumerate(pedidos_nomes):
     print(f"{i+1}º pedido: {pedidos}")
 
-print(f"\nValor do pratos:{valor_pratos}")
-print(f"\nForma de Pagamento:{forma_pagamento}")
-if pagamento == "a vista" | "á vista" | "Á vista" | "A vista":
-    print("\nValor do desconto: 10%")
-print(f"\nValor final:{valor_final}")
+print(f"\nValor dos pratos: {valor_pratos}")
+print(f"\nForma de Pagamento: {forma_pagamento}")
+print(f"\nValor final: {valor_final}")
