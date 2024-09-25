@@ -37,7 +37,7 @@ def cartao (valor_pratos):
     return valor_final, valor_adicionado
 
 print("""
-         MENU
+======== MENU ========
 
 1 - picanha R$ 25,00
 2 - lasanha R$ 20,00
@@ -58,31 +58,31 @@ while True:
     match(pratos):
         case 1:
             pedidos_preco.append(25)
-            pedidos_nomes.append("1- Picanha: R$25,00")
+            pedidos_nomes.append("1 - Picanha: R$25,00")
 
         case 2:
             pedidos_preco.append(20)
-            pedidos_nomes.append("2- Lasanha: R$20,00")
+            pedidos_nomes.append("2 - Lasanha: R$20,00")
             
         case 3:
             pedidos_preco.append(18)
-            pedidos_nomes.append("3- Strogonoff: R$18,00")
+            pedidos_nomes.append("3 - Strogonoff: R$18,00")
 
         case 4:
             pedidos_preco.append(15)
-            pedidos_nomes.append("4- Bife acebolado: R$15,00")
+            pedidos_nomes.append("4 - Bife acebolado: R$15,00")
 
         case 5:
             pedidos_preco.append(5)
-            pedidos_nomes.append("5- Pão com ovo: R$5,00")
+            pedidos_nomes.append("5 - Pão com ovo: R$5,00")
 
         case 6:
             pedidos_preco.append(25)
-            pedidos_nomes.append("6- Feijoada: R$25,00")
+            pedidos_nomes.append("6 - Feijoada: R$25,00")
 
         case 7:
             pedidos_preco.append(20)
-            pedidos_nomes.append("7- Pirão de aimpim R$20,00")
+            pedidos_nomes.append("7 - Pirão de aimpim: R$20,00")
 
         case 0:
             break
