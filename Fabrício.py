@@ -4,32 +4,41 @@ os.system("cls || clear")
 
 cardapio = []
 
-pratos = input("Digite o número do prato desejado: ")
-cardapio.append(pratos)
 
 while True:
+    pratos = int(input("\nDigite o número do prato desejado: "))
     match(pratos):
-        case "1":
+        case 1:
+            print("\nPrato adicionado ao seu pedido")
             print("Picanha: R$25.00")
-            break
-        case "2":
+
+        case 2:
+            print("\nPrato adicionado ao seu pedido")
             print("Lasanha: R$20.00")
-            break
-        case "3":
+            
+        case 3:
+            print("\nPrato adicionado ao seu pedido")
             print("Strogonoff: R$18.00")
-            break
-        case "4":
+
+            
+        case 4:
+            print("\nPrato adicionado ao seu pedido")
             print("Bife acebolado: R$15.00")
-            break
-        case "5":
+
+        case 5:
+            print("\nPrato adicionado ao seu pedido")
             print("Pão com ovo: R$5.00")
-            break
-        case "6":
+
+        case 6:
+            print("\nPrato adicionado ao seu pedido")
             print("Feijoada: R$25.00")
-            break
-        case "7":
+
+        case 7:
+            print("\nPrato adicionado ao seu pedido")
             print("Pirão de aipim: 20.00")
-        case "0":
+
+        case 0:
             break
+
         case _:
             print("Opção inválida\nTente novamente.")
