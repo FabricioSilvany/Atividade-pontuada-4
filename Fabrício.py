@@ -2,11 +2,11 @@ import os
 
 os.system("cls || clear")
 
-cardapio = []
-
 
 while True:
     pratos = int(input("\nDigite o número do prato desejado: "))
+    os.system("cls || clear")
+    
     match(pratos):
         case 1:
             print("\nPrato adicionado ao seu pedido")
