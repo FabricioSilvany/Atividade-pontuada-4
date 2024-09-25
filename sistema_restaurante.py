@@ -126,13 +126,17 @@ if pagamento == 1:
 elif pagamento == 2:
     forma_pagamento = "Cartão"
     valor_final, valor_adicionado = cartao(valor_pratos)
-os.system("cls || clear")
 
 for i, pedidos in enumerate(pedidos_nomes):
     print(f"{i+1}º pedido: {pedidos}")
+
 
 print(f"\nValor dos pratos: {valor_pratos}")
 print(f"\nForma de Pagamento: {forma_pagamento}")
 if forma_pagamento == 1:
     print("\nDesconto de 10%!")
+    print(f"\nValor descontado: R${valor_descontado}")
+elif forma_pagamento == 2:
+    print("Seu valor final teve um acrescimo de 10%!")
+    print(f"Acrescimo de: R${valor_adicionado}")
 print(f"\nValor final: {valor_final}")
