@@ -6,6 +6,7 @@ Nome completo dos componentes.
 1 - Fabricio Silvany de Jesus
 2 - Jonatas Fernandes dos Santos
 3 - José Elias Lima Pereira
+4 - Victor 
 """
 
 
@@ -49,7 +50,9 @@ print("""
 """)
 
 
-
+#Listas
+pedidos_preco = []
+pedidos_nomes = []
 
 while True:
     pratos = float(input("\nDigite o número do prato desejado: "))
@@ -96,6 +99,32 @@ while True:
         ()
     else:
         break
+        
+pagamento = int(input("""
+1 - À vista
+2 - Cartão
+"""))
+
+match(pagamento):
+    case 1:
+        print("Desconto de 10%")
+    case 2:
+        print("Acréscimo de 10%")
+
+valor_pratos = sum(pedidos_preco)
+
+if pagamento == 1:
+    forma_pagamento = "À vista"
+    valor_final, valor_descontado = vista(valor_pratos)
+elif pagamento == 2:
+    forma_pagamento = "Cartão"
+    valor_final, valor_adicionado = cartao(valor_pratos)
 
 for i, pedidos in enumerate(pedidos_nomes):
     print(f"{i+1}º pedido: {pedidos}")
+
+print(f"\nValor do pratos:{valor_pratos}")
+print(f"\nForma de Pagamento:{forma_pagamento}")
+if pagamento == "a vista" | "á vista" | "Á vista" | "A vista":
+    print("\nValor do desconto: 10%")
+print(f"\nValor final:{valor_final}")
