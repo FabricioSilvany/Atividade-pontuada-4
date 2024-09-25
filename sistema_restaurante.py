@@ -58,9 +58,6 @@ def cartao (valor_pratos):
 
     return valor_final, valor_adicionado
 
-#Listas
-pedidos_preco = []
-pedidos_nomes = []
 menu()
 
 
