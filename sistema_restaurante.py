@@ -58,27 +58,11 @@ def cartao (valor_pratos):
 
     return valor_final, valor_adicionado
 
-<<<<<<< HEAD
-print("""
-======== MENU ========
-
-1 - picanha R$ 25,00
-2 - lasanha R$ 20,00
-3 - strogonoff R$ 18,00
-4 - bife acebolado R$ 15,00
-5 - pao com ovo R$ 5,00
-6 - feijoada R$ 25,00
-7 - pirao de aipim R$ 20,00
-""")
-
-
 #Listas
 pedidos_preco = []
 pedidos_nomes = []
-=======
 menu()
 
->>>>>>> 9d7f46d (SAVE)
 
 while True:
     pratos = float(input("\nDigite o número do prato desejado: "))
@@ -152,4 +136,6 @@ for i, pedidos in enumerate(pedidos_nomes):
 
 print(f"\nValor dos pratos: {valor_pratos}")
 print(f"\nForma de Pagamento: {forma_pagamento}")
+if forma_pagamento == 1:
+    print("\nDesconto de 10%!")
 print(f"\nValor final: {valor_final}")
