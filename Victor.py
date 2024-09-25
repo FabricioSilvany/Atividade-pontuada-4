@@ -9,6 +9,7 @@ def vista (valor_pratos):
     valor_final = valor_pratos - (0.10 * valor_pratos)
     valor_descontado = (0.10 * valor_pratos)
     return valor_final, valor_descontado
+
 def cartao (valor_pratos):
     #pagamento com cartão recebe 10% 
     valor_final = valor_pratos + (0.10 * valor_pratos)
