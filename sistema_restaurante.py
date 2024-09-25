@@ -103,7 +103,7 @@ while True:
     adicionar_prato = input("\nQuer adicionar outro prato? \nSe quiser adicionar outro prato digite 'sim'\nSenão digite'0' \nR: ").lower()
 
     if adicionar_prato == "sim":
-        ()
+        menu ()
     else:
         break
         
