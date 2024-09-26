@@ -136,7 +136,7 @@ match(pagamento):
             print("Seu valor final teve um acrescimo de 10%!")
             print(f"Acrescimo de: R${valor_adicionado}")
 
-valor_pratos = sum(pedidos_preco)
+DD = sum(pedidos_preco)
 
 
 for i, pedidos in enumerate(pedidos_nomes):
