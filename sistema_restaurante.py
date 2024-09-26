@@ -35,7 +35,6 @@ def menu():
     """)
 
 # Defs para o pagamento
-
 def vista (valor_pratos):
     #Pagamento a vista recebe 10% de desconto
     valor_final = valor_pratos - (0.10 * valor_pratos)
@@ -101,7 +100,7 @@ while True:
 
         case _:
             print("Opção inválida\nTente novamente.")
-            
+   
     adicionar_prato = input("\nQuer adicionar outro prato? \nSe quiser adicionar outro prato digite 'sim'\nSenão digite'0' \nR: ").lower()
     os.system("cls || clear")
 
