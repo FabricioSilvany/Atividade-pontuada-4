@@ -34,8 +34,6 @@ def menu():
     7 - pirao de aipim R$ 20,00
     """)
 
-
-
 # Defs para o pagamento
 
 def vista (valor_pratos):
@@ -64,7 +62,7 @@ def acresimo (valor_pratos):
 
 menu()
 
-
+#Mostrando opções
 while True:
     pratos = float(input("\nDigite o número do prato desejado: "))
     os.system("cls || clear")
@@ -105,6 +103,7 @@ while True:
             print("Opção inválida\nTente novamente.")
             
     adicionar_prato = input("\nQuer adicionar outro prato? \nSe quiser adicionar outro prato digite 'sim'\nSenão digite'0' \nR: ").lower()
+    os.system("cls || clear")
 
     if adicionar_prato == "sim":
         menu()
@@ -121,6 +120,7 @@ Digite sua forma de pagamento:
 2 - Cartão
 
 R: """))
+os.system("cls || clear")
 
 valor_pratos = sum(pedidos_preco)
 
@@ -134,16 +134,25 @@ match(pagamento):
     case 2:
         forma_pagamento = "Cartão"
         valor_final = cartao(valor_pratos)
-        valor_adicionado = acresimo(valor_pratos)
-        print("Seu valor final teve um acrescimo de 10%!")
-        print(f"Acrescimo de: R${valor_adicionado}")
+    case _:
+        ("Opção inválida\n Tente novamente")
+       
+
+if forma_pagamento == "À vista":
+    valor_descontado = desconto(valor_pratos)
+    print("\nDesconto de 10%!")
+    print(f"\nValor descontado: R${valor_descontado}")
+elif forma_pagamento == "Cartão":
+    valor_adicionado = acresimo(valor_pratos)
+    print("Seu valor final teve um acrescimo de 10%!")
+    print(f"Acrescimo de: R${valor_adicionado}")
 
 
 
 for i, pedidos in enumerate(pedidos_nomes):
-    print(f"{i+1}º pedido: {pedidos}")
+    print(f"\n{i+1}º pedido: {pedidos}")
 
 
-print(f"\nValor dos pratos: {valor_pratos}")
-print(f"\nForma de Pagamento: {forma_pagamento}")
-print(f"\nValor final: {valor_final}")
+print(f"Valor dos pratos: {valor_pratos}")
+print(f"Forma de Pagamento: {forma_pagamento}")
+print(f"Valor final: {valor_final}")
