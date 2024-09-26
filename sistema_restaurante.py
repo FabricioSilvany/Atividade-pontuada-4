@@ -124,13 +124,16 @@ os.system("cls || clear")
 
 valor_pratos = sum(pedidos_preco)
 
+
+
+
+
+
 match(pagamento):
     case 1:
         forma_pagamento = "À vista"
         valor_final = vista(valor_pratos)
         valor_descontado = desconto(valor_pratos)
-        print("\nDesconto de 10%!")
-        print(f"Valor descontado: R${valor_descontado}")
     case 2:
         forma_pagamento = "Cartão"
         valor_final = cartao(valor_pratos)
@@ -138,6 +141,13 @@ match(pagamento):
         ("Opção inválida\n Tente novamente")
        
 
+print("=== Pedidos ===")
+for i, pedidos in enumerate(pedidos_nomes):
+    print(f"{i+1}º pedido: {pedidos}")
+
+print("=== RECIBO ===")
+print(f"Valor dos pratos: {valor_pratos}")
+print(f"Forma de Pagamento: {forma_pagamento}")
 if forma_pagamento == "À vista":
     valor_descontado = desconto(valor_pratos)
     print("\nDesconto de 10%!")
@@ -146,13 +156,4 @@ elif forma_pagamento == "Cartão":
     valor_adicionado = acresimo(valor_pratos)
     print("Seu valor final teve um acrescimo de 10%!")
     print(f"Acrescimo de: R${valor_adicionado}")
-
-
-
-for i, pedidos in enumerate(pedidos_nomes):
-    print(f"\n{i+1}º pedido: {pedidos}")
-
-
-print(f"Valor dos pratos: {valor_pratos}")
-print(f"Forma de Pagamento: {forma_pagamento}")
 print(f"Valor final: {valor_final}")
