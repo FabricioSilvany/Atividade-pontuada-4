@@ -20,7 +20,7 @@ pedidos_preco = []
 pedidos_nomes = []
 
 # def para o Menu
-def menu ():
+def menu():
     os.system("cls || clear") 
     print("""
     ======== MENU ========
@@ -112,10 +112,14 @@ while True:
         break
         
 pagamento = int(input("""
+Digite sua forma de pagamento:
+                                             
 1 - À vista
 2 - Cartão
 
 R: """))
+
+valor_pratos = sum(pedidos_preco)
 
 match(pagamento):
     case 1:
@@ -129,15 +133,12 @@ match(pagamento):
             forma_pagamento = "Cartão"
             valor_final, valor_adicionado = cartao(valor_pratos)
 
-        if forma_pagamento == 1:
+        if forma_pagamento == "À vista":
             print("\nDesconto de 10%!")
             print(f"\nValor descontado: R${valor_descontado}")
-        elif forma_pagamento == 2:
+        elif forma_pagamento == "Cartão":
             print("Seu valor final teve um acrescimo de 10%!")
             print(f"Acrescimo de: R${valor_adicionado}")
-
-DD = sum(pedidos_preco)
-
 
 for i, pedidos in enumerate(pedidos_nomes):
     print(f"{i+1}º pedido: {pedidos}")
