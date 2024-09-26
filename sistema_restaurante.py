@@ -124,11 +124,6 @@ os.system("cls || clear")
 
 valor_pratos = sum(pedidos_preco)
 
-
-
-
-
-
 match(pagamento):
     case 1:
         forma_pagamento = "À vista"
