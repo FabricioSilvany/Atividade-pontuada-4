@@ -6,7 +6,7 @@ Nome completo dos componentes.
 1 - Fabricio Silvany de Jesus
 2 - Jonatas Fernandes dos Santos
 3 - José Elias Lima Pereira
-4 - Victor 
+4 - Victor Andrade Costa Pinto
 """
 
 
@@ -143,7 +143,6 @@ elif forma_pagamento == 2:
     valor_adicionado = acresimo(valor_pratos)
     print("Seu valor final teve um acrescimo de 10%!")
     print(f"Acrescimo de: R${valor_adicionado}")
-
 
 
 
