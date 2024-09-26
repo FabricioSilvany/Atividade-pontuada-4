@@ -139,7 +139,7 @@ print("=== Pedidos ===")
 for i, pedidos in enumerate(pedidos_nomes):
     print(f"{i+1}º pedido: {pedidos}")
 
-print("=== RECIBO ===")
+print("=== \nRECIBO ===")
 print(f"Valor dos pratos: {valor_pratos}")
 print(f"Forma de Pagamento: {forma_pagamento}")
 if forma_pagamento == "À vista":
