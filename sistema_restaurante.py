@@ -126,23 +126,17 @@ valor_pratos = sum(pedidos_preco)
 
 match(pagamento):
     case 1:
-        print("\nDesconto de 10%")
         forma_pagamento = "À vista"
         valor_final = vista(valor_pratos)
+        valor_descontado = desconto(valor_pratos)
+        print("\nDesconto de 10%!")
+        print(f"Valor descontado: R${valor_descontado}")
     case 2:
-        print("\nAcréscimo de 10%")
         forma_pagamento = "Cartão"
         valor_final = cartao(valor_pratos)
-       
-
-if forma_pagamento == 1:
-    valor_descontado = desconto(valor_pratos)
-    print("\nDesconto de 10%!")
-    print(f"\nValor descontado: R${valor_descontado}")
-elif forma_pagamento == 2:
-    valor_adicionado = acresimo(valor_pratos)
-    print("Seu valor final teve um acrescimo de 10%!")
-    print(f"Acrescimo de: R${valor_adicionado}")
+        valor_adicionado = acresimo(valor_pratos)
+        print("Seu valor final teve um acrescimo de 10%!")
+        print(f"Acrescimo de: R${valor_adicionado}")
 
 
 
